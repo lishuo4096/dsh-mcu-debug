@@ -216,4 +216,5 @@ node .probe/compiled-params.mjs
 MIT —— 见 [LICENSE](LICENSE)。版权归 lishuo4096。
 
 `vendor/openocd/` 是 OpenOCD 0.12.0 的**原样再分发**，其自身许可是 **GNU GPL v2**，
-许可证文本完整保留在该目录内（`license-openocd.txt` 等）。上面的 MIT 只覆盖本插件自身源码。
+许可证文本完整保留在该目录内（`license-openocd.txt` 等）。上面的 MIT 只覆盖本插件自身源码 ——
+详见 [THIRD-PARTY.md](THIRD-PARTY.md)。
