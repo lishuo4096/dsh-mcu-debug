@@ -1,0 +1,10 @@
+# 统一换行，避免 Windows/Linux 来回改行尾
+* text=auto eol=lf
+
+# PowerShell 脚本在 Windows 上按 CRLF 处理最稳
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# vendor/openocd 是上游原样再分发，不要规范化、不要出现在语言统计里
+vendor/** -text -diff linguist-vendored

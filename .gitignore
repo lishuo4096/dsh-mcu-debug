@@ -1,0 +1,19 @@
+# 运行时产物：会话工作目录、openocd 原始输出、串口宿主暂存脚本
+.run/
+
+# 烧录前自动备份的固件（可能含你自己的目标代码，别误传）
+backups/
+
+# 依赖
+node_modules/
+
+# 日志与临时文件
+*.log
+ocd_try.out
+ocd_try.err
+
+# 编辑器/系统
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

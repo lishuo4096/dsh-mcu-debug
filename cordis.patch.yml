@@ -1,0 +1,17 @@
+# dsh-mcu-debug 的宿主补丁
+#
+# 安装方式（在 DSH 会话里）：
+#
+#   plugin_manager({ action: "install_bundle", target: "C:\\Users\\lishuo\\Documents\\DSH_Project\\插件开发\\dsh-mcu-debug" })
+#
+# 它会写两个地方：
+#   1. profile 的 package.json → dependencies 里加
+#        "@local/dsh-mcu-debug": "link:C:/Users/lishuo/Documents/DSH_Project/插件开发/dsh-mcu-debug"
+#   2. profile 的 dsh.profile.bundles 数组里追加包名 "@local/dsh-mcu-debug"
+#
+# ⚠️ 下面的 `id` 必须与 index.js 里的 `export const name` **逐字一致**，
+#    写错了宿主会报一个语焉不详的 "plugin not found"。
+
+- insert:
+    - id: mcu-debug
+      name: "@local/dsh-mcu-debug"

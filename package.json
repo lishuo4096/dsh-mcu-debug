@@ -1,0 +1,55 @@
+{
+  "name": "@local/dsh-mcu-debug",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DSH 插件：ARM Cortex-M 调试与串口（STM32 / PY32，CMSIS-DAP/DAPLink），带独立 openocd 副本与断点零残留收尾",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "skills",
+    "references",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.0-rc.2": "compatible"
+      }
+    }
+  },
+  "meta": {
+    "title": "MCU 调试（STM32 / PY32）",
+    "description": "用独立 openocd 副本调试与烧录 STM32/PY32（CMSIS-DAP/DAPLink），支持多探针精确锁定、常驻会话、gdb、以及串口收发。收尾固定清断点，避免断点残留被固化进固件。"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "openocd",
+    "cmsis-dap",
+    "daplink",
+    "stm32",
+    "py32",
+    "cortex-m",
+    "serial"
+  ],
+  "license": "MIT"
+}
